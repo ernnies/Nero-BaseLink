@@ -7,7 +7,7 @@ import { Loader } from 'react-loader-spinner'
 import { nftContractAddress } from '@/config';
 import NFT from '@/utils/EternalNFT.json'
 
-const Home = 
+const Home = () => {
 
   const [mintedNFT, setMintedNFT] = useState(null);
   const [miningStatus, setMiningStatus] = useState(null);
@@ -51,7 +51,16 @@ const Home =
 
       if (chainId !== sepoliaChainId && chainId !== localhostChainId) {
         alert('You are not connected to the Sepolia testnet')
-        re
+        return
+      }
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+
+      console.log('Found account', accounts[0])
+      setCurrentAccount(accounts[0])
+    } catch (error) {
+      console.log('Error connecting to metamask', error)
+    }
+  }
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
@@ -73,7 +82,8 @@ const Home =
       console.log("Ethereum object:", ethereum);
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
-        console.log("Prov        const signer = provider.getSigner();
+        console.log("Provider created:", provider);
+        const signer = provider.getSigner();
         console.log("Signer obtained:", signer);
         const nftContract = new ethers.Contract(nftContractAddress, NFT.abi, signer);
         let nftTx = await nftContract.createEternalNFT();
