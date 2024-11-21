@@ -53,7 +53,7 @@ const Home =
         alert('You are not connected to the Sepolia testnet')
         return
       }
-      const accounts = await ethereum.requ
+      const accounts = await ethereum.re
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
