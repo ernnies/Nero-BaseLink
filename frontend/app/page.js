@@ -57,7 +57,7 @@ const Home =
 
       console.log('Found account', accounts[0])
       setCurrentAccount(accounts[0])
-    } 
+    
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
