@@ -59,7 +59,7 @@ const Home =
       setCurrentAccount(accounts[0])
     } catch (error) {
       console.log('Error connecting to metam
-    
+
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
