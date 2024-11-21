@@ -55,7 +55,7 @@ const Home =
       }
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
 
-      cons
+      co
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
