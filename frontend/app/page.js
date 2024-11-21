@@ -59,8 +59,7 @@ const Home =
       setCurrentAccount(accounts[0])
     } catch (error) {
       console.log('Error connecting to metamask', error)
-    }
-  }
+    
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
@@ -82,7 +81,7 @@ const Home =
       console.log("Ethereum object:", ethereum);
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
-        console.log("Provide        const signer = provider.getSigner();
+        console.log("Prov        const signer = provider.getSigner();
         console.log("Signer obtained:", signer);
         const nftContract = new ethers.Contract(nftContractAddress, NFT.abi, signer);
         let nftTx = await nftContract.createEternalNFT();
