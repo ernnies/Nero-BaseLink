@@ -82,7 +82,7 @@ const Home =
       console.log("Ethereum object:", ethereum);
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
-        console.log("Provider created:        const signer = provider.getSigner();
+        console.log("Provider creat        const signer = provider.getSigner();
         console.log("Signer obtained:", signer);
         const nftContract = new ethers.Contract(nftContractAddress, NFT.abi, signer);
         let nftTx = await nftContract.createEternalNFT();
