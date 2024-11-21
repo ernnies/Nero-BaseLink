@@ -52,8 +52,7 @@ const Home =
       if (chainId !== sepoliaChainId && chainId !== localhostChainId) {
         alert('You are not connected to the Sepolia testnet')
         return
-      }
-
+      
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
