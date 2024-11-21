@@ -53,7 +53,7 @@ const Home =
         alert('You are not connected to the Sepolia testnet')
         return
       }
-      const accoun
+      const acco
 
   //Checks if wallet is connected to the correct Network
   const checkCorrectNetwork = async () => {
