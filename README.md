@@ -1,136 +1,65 @@
-# FullStack-NFT-minting-dApp
+## BaseLink Overview
 
-A full stack dApp starter for minting NFTs built on Ethereum (Solidity) with Next.js (React).
+BaseLink is a Dapp that enables users and small businesses to create USDT payment links on Base!
 
-## Table of Contents
-  - [Deployed Website url](#deployed-website-url)
-  - [Deployed Contract Address](#deployed-contract-address)
-  - [Project Description](#project-description)
-  - [Workflow](#workflow)
-  - [Directory structure](#directory-structure)
-  - [Clone, Install and Build steps](#clone-install-and-build-steps)
-    - [Prerequisites](#prerequisites)
-    - [Cloning and installing dependencies](#cloning-and-installing-dependencies)
-    - [Testing Contracts](#testing-contracts)
-    - [Running the frontend](#running-the-frontend)
+## Problem
 
+Currently, social media-based business owners face significant barriers in receiving international payments. While they can easily market their products globally, converting international interest into actual sales remains a challenge. They can share long wallet addresses to receive payments but this is prone to typo error. This approach is also inconvenient for users or small businesses who want to track payments and inventory.
 
-## Deployed Website url
+## Solution
 
-https://eternal-nft.vercel.app/
+BaseLink lets users create listings, share links, and receive USDT payments directly to their wallet. It's great for small businesses, donations, and community contributions. BaseLink has the benefits of:
 
-## Deployed Contract Address
+- Eliminating error with long wallet addresses
+- Enables cross border payments
+- Inventory management
 
-0x9b6dd9b898c300037c8C245e8E619a0934158065
+## Demo & Transaction
 
-## Project Description
+- [Live Dapp](https://baselnk.vercel.app)
 
-A dapp to mint your own text-based **Eternal Character NFT**.
+- [Demo Video](https://youtu.be/TLY0ymsPMnc)
 
-**Eternal Characters** are the residents of **Eternal Domain world**. They consist of 3 main characteristics, Area of Control, Weapon and Rank.
+- [Presentation Slides](https://baselnk.vercel.app/BaseLink_presentation.pdf)
 
-**Area of Control -** Fire, Wind, Wave, Earth, Light, Shadow, Thunder, Space, Time, Gravity, Ice
-**Weapon -** Sword, Spear, Shield, Hammer, Saber, Axe, Bow, Staff, Wand, Fist, Dagger, Scythe, Mace, Blade, Katana
-**Rank -** Lord, King, Emperor, Venerable, Ancestor, Saint, God
+- [Verified Smart Contract (Base Sepolia scan)](https://sepolia.basescan.org/address/0x348f9695E78b67931Fd9CB705e8bCbdDDA15cDB9#events)
 
-## Workflow
+- [Smart Wallet Create Listing Transaction (Base Sepolia scan)](https://sepolia.basescan.org/tx/0x234cfa0eeee2a629b23b40827d1bab431732db5bab29ca93b595d1bb63083beb)
 
-1. Enter the dApp and connect the wallet to rinkeby network.
-2. Click on the Mint Character button.
-3. Metamask pops up and asks to confirm the transaction.
-4. After the transaction is successfully processed the user can see the minted character.
-5. The minted character is also added to My NFT page under Minted Characters section.
+- [Smart Wallet Pay Listing Transaction (base Sepolia scan) ](https://sepolia.basescan.org/tx/0xb4a1d2e2add16667e46692f14b5cc116c505165a050d0c1a3050b488c1c2071f)
 
-## Directory structure
+- [EOA Create Listing Transaction (Base Sepolia scan)](https://sepolia.basescan.org/tx/0x81356115fb6eff94b27daa51740036352b088e0448f6543777701dcc5e0121d2)
 
-```
-EternalNFT
-┣ frontend
-┃ ┣ app
-┃ ┃ ┃ favicon.ico 
-┃ ┃ ┃ globals.css
-┃ ┃ ┃ layout.js
-┃ ┃ ┗ page.js
-┃ ┣ public
-┃ ┃ ┃ next.svg
-┃ ┃ ┃ screenshot.png
-┃ ┃ ┗ vercel.svg
-┃ ┣ utils
-┃ ┃ ┗ EternalNFT.json
-┃ ┣ .gitignore
-┃ ┣ README.md
-┃ ┣ config.js
-┃ ┣ package-lock.json
-┃ ┣ package.json
-┃ ┣ postcss.config.js
-┃ ┗ tailwind.config.js
-┣ contracts
-┃ ┣ libraries
-┃ ┃ ┗ Base64.sol
-┃ ┗ EternalNFT.sol
-┣ scripts
-┃ ┗ deploy.js
-┣ test
-┃ ┗ EternalNFT-test.js
-┣ .gitignore
-┣ README.md
-┣ hardhat.config.js
-┣ package-lock.json
-┗ package.json
-```
+- [EOA Wallet Pay Listing Transaction (base Sepolia scan) ](https://sepolia.basescan.org/tx/0x88aa50c47998a878273a7b11ec914ed549a92f6f973e2f768a0043d30dcca3ad)
 
-## Clone, Install and Build steps
+## Tech Stack
 
-### Prerequisites
+- **Backend**: Solidity, Remix, PostgreSql
 
-1. [Git](https://git-scm.com/)
-2. [Node JS](https://nodejs.org/en/) (everything was installed and tested under v15.12.0)
-3. A Browser with the [MetaMask extension](https://metamask.io/) installed.
-4. Test Ether on the Rinkeby network.
+- **Frontend**: NextJs, Wagmi library, Base smart wallet for blockchain interaction
 
-<br>
+- **Approach**: Associate listings with smart wallet addresses on smart contract. Facilitate payments via smart contract on BASE(Sepolia) blockchain for speed, and gas free!
 
-### Cloning and installing dependencies
+## Road Map (v0.0.1)
 
-1. Clone the project repository on your local machine
+- incorporate sponsored gas for managing listings on mainnet
 
-```
- git clone https://github.com/dodger213/FullStack-NFT-minting-dApp.git
- cd FullStack-NFT-minting-dApp
-```
+- make payments (approval and transfer) one click
 
-2. Installing dependencies
+- Add optional email notification on received payments
 
-- For contracts -
-  ```
-  npm install
-  ```
-- For client -
-  ```
-  cd client
-  npm install
-  ```
+- Add Images and videos to listings
 
-### Testing Contracts
+- Add public listing page for verified social media businesses (Marketplace)
 
-For testing contracts run command:
+## Previews
 
-```
-npx hardhat test
-```
+![homepage](https://baselnk.vercel.app/img/homepage.png)
 
-### Running the frontend
+![dashboard](https://baselnk.vercel.app/img/dashboard.png)
 
-For running frontend locally run command:
+![create_listing](https://baselnk.vercel.app/img/create_listing.png)
 
-```
-cd client
-npm run dev
-```
+![view_listing](https://baselnk.vercel.app/img/view_listing.png)
 
-### Environment variables (not needed for running project locally)
-
-```
-ALCHEMY_RINKEBY_URL =
-ACCOUNT_KEY =
-```
+![payment_page](https://baselnk.vercel.app/img/payment_page.png)
