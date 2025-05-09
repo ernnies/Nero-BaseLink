@@ -4,6 +4,7 @@ import Container from "@/components/Container";
 import Link from "next/link";
 import { Stroke } from "@/icons";
 import { Button } from "@/components/ui/button";
+import NeroBenefitsBanner from "@/components/NeroBenefitsBanner";
 
 export default function Component() {
   const { isConnected, address } = useAccount();
@@ -14,6 +15,7 @@ export default function Component() {
       <div className="opacity-0">{address}</div>
       <div className="flex flex-col justify-center items-center">
         <section className="py-8 lg:py-8 px-4 lg:pt-10 lg:px-7 pb-16">
+          <NeroBenefitsBanner />
           <header className="flex flex-col gap-y-12 xl:max-w-[1080px] xl:mx-auto">
             <div className="flex flex-col ">
               <h1
