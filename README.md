@@ -1,12 +1,4 @@
-Here's your enhanced README.md that better aligns with NERO Chain's WaveHack goals while maintaining all your existing functionality:
-
-```markdown
 # Nero-BaseLink: Frictionless Payments with NERO Chain
-
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://baselnk.vercel.app)
-[![Built with NERO Chain](https://img.shields.io/badge/powered%20by-NERO%20Chain-blue)](https://nerochain.io)
-
-## Overview
 
 Nero-BaseLink is a DeFi payment solution leveraging NERO Chain's Account Abstraction to enable gasless USDT payment links with smart wallet onboarding. Businesses can create trackable payment links while abstracting away Web3 complexity.
 
